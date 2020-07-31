@@ -1,12 +1,15 @@
 <template>
   <div id="app">
+    <navbar v-if="page === 'Courses' || page === 'Users'"/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue'
 export default {
   components: {
+    Navbar
   },
   data () {
     return {
